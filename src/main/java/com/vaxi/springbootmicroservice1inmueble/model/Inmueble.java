@@ -19,7 +19,7 @@ public class Inmueble {
     private String direccion;
 
     @Column(name = "foto", length = 1200, nullable = false)
-    private String piecture;
+    private String picture;
 
     @Column(name = "precio", nullable = false)
     private Double precio;

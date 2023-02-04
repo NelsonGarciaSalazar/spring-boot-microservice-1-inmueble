@@ -36,11 +36,11 @@ public class SecurityConfig {
         authenticationManagerBuilder.inMemoryAuthentication()
                 .withUser(SECURE_KEY_USERNAME)
                 .password(new BCryptPasswordEncoder().encode(SECURE_KEY_PASSWORD))
-                .authorities(AuthorityUtils.commaSeparatedStringToAuthorityList("ROL_ADMIN"))
+                .authorities(AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_ADMIN"))
                 .and()
                 .withUser(SECURE_KEY_USERNAME_2)
                 .password(new BCryptPasswordEncoder().encode(SECURE_KEY_PASSWORD_2))
-                .authorities(AuthorityUtils.commaSeparatedStringToAuthorityList("ROL_DEV"))
+                .authorities(AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_DEV"))
                 .and()
                 .passwordEncoder(new BCryptPasswordEncoder());
 
